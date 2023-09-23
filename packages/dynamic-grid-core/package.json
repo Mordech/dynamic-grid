@@ -5,6 +5,11 @@
   "private": true,
   "description": "A dynamic grid component",
   "main": "./dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mordech/dynamic-grid.git",
+    "homepage": "https://github.com/Mordech/dynamic-grid/tree/main/packages/dynamic-grid-core#readme"
+  },
   "scripts": {
     "build-js": "tsc",
     "build-css": "sass ./lib:./css",
