@@ -15,7 +15,7 @@ jobs:
           fetch-depth: 0
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: yarn install --immutable --immutable-cache --check-cache
 
       - name: Build & test affected
         run: yarn lerna run build,lint --since=origin/main
