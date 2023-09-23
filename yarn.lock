@@ -739,7 +739,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mordech/dynamic-grid-core@workspace:*, @mordech/dynamic-grid-core@workspace:packages/dynamic-grid-core":
+"@mordech/dynamic-grid-core@*, @mordech/dynamic-grid-core@workspace:packages/dynamic-grid-core":
   version: 0.0.0-use.local
   resolution: "@mordech/dynamic-grid-core@workspace:packages/dynamic-grid-core"
   languageName: unknown
@@ -3061,7 +3061,7 @@ __metadata:
   resolution: "dynamic-grid@workspace:."
   dependencies:
     "@lit-labs/observers": ^2.0.0
-    "@mordech/dynamic-grid-core": "workspace:*"
+    "@mordech/dynamic-grid-core": "*"
     "@mordech/vite-lit-loader": ^0.29.1
     "@types/react": ^18.2.15
     "@types/react-dom": ^18.2.7
