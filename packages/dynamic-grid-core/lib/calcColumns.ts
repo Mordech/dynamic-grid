@@ -1,10 +1,10 @@
 interface CalcColumnParams {
   minWidth: number;
   elementWidth: number;
-  gap?: number;
-  dividedBy?: number;
-  maxColumns?: number;
-  scrollHint?: number;
+  gap: number | undefined;
+  dividedBy: number | undefined;
+  maxColumns: number | undefined;
+  scrollHint: number | undefined;
 }
 
 const divideColumns = (columns: number, divideBy: number) =>

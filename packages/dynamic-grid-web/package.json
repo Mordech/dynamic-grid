@@ -12,8 +12,19 @@
     "lint": "eslint --ext .js,.ts ./lib",
     "prepare": "yarn build"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mordech/dynamic-grid.git",
+    "homepage": "https://github.com/Mordech/dynamic-grid/tree/main/packages/dynamic-grid-web#readme"
+  },
+  "files": [
+    "dist"
+  ],
   "dependencies": {
     "@lit-labs/observers": "^2.0.0",
     "lit": "^2.7.6"
+  },
+  "devDependencies": {
+    "vite": "^4.4.7"
   }
 }
