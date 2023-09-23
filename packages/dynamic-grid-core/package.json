@@ -2,7 +2,7 @@
   "name": "@mordech/dynamic-grid-core",
   "version": "0.0.0",
   "license": "MIT",
-  "private": true,
+  "private": false,
   "description": "A dynamic grid component",
   "main": "./dist/index.js",
   "repository": {
