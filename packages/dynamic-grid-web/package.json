@@ -1,0 +1,19 @@
+{
+  "name": "@mordech/dynamic-grid-web",
+  "private": true,
+  "license": "MIT",
+  "version": "0.0.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint --ext .js,.ts ./lib",
+    "prepare": "yarn build"
+  },
+  "dependencies": {
+    "@lit-labs/observers": "^2.0.0",
+    "lit": "^2.7.6"
+  }
+}

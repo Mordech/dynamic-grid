@@ -1,0 +1,26 @@
+0 silly argv {
+0 silly argv   _: [ 'run' ],
+0 silly argv   since: 'origin/main',
+0 silly argv   lernaVersion: '7.3.0',
+0 silly argv   '$0': 'node_modules/lerna/dist/cli.js',
+0 silly argv   script: [ 'build', 'lint' ]
+0 silly argv }
+1 notice cli v7.3.0
+2 verbose packageConfigs Resolving packages based on package.json "workspaces" configuration.
+3 verbose rootPath /Users/mordech/repos/dynamic-grid
+4 notice filter changed since "origin/main"
+5 silly hasTags
+6 verbose hasTags false
+7 info Looking for changed packages since origin/main
+8 silly checking diff packages/dynamic-grid-core
+9 error Error: Command failed with exit code 128: git diff --name-only origin/main -- packages/dynamic-grid-core
+9 error fatal: bad revision 'origin/main'
+9 error     at makeError (/Users/mordech/repos/dynamic-grid/node_modules/execa/lib/error.js:60:11)
+9 error     at module.exports.sync (/Users/mordech/repos/dynamic-grid/node_modules/execa/index.js:194:17)
+9 error     at execSync (/Users/mordech/repos/dynamic-grid/node_modules/@lerna/child-process/index.js:39:16)
+9 error     at diffSinceIn (/Users/mordech/repos/dynamic-grid/node_modules/lerna/dist/index.js:440:10)
+9 error     at hasDiffSinceThatIsntIgnored (/Users/mordech/repos/dynamic-grid/node_modules/lerna/dist/index.js:413:18)
+9 error     at isCandidate (/Users/mordech/repos/dynamic-grid/node_modules/lerna/dist/index.js:500:77)
+9 error     at /Users/mordech/repos/dynamic-grid/node_modules/lerna/dist/index.js:508:9
+9 error     at Array.forEach (<anonymous>)
+9 error     at collectProjects (/Users/mordech/repos/dynamic-grid/node_modules/lerna/dist/index.js:507:12)

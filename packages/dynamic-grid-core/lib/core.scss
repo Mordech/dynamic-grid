@@ -1,0 +1,57 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(
+    var(--dg-repeat-count, auto-fit),
+    minmax(var(--dg-min-width, 200px), 1fr)
+  );
+  gap: var(--dg-gap, unset);
+  overflow: hidden;
+}
+
+/* dose'nt work with --dg-repeat-count: auto-fit/fill */
+.is-scroll {
+  scroll-behavior: smooth;
+  overflow-x: scroll;
+  overflow-y: visible;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(var(--dg-scroll-rows, 1), auto);
+  grid-template-columns: unset;
+  grid-auto-columns: max(
+    calc(
+      (
+          100% - (var(--dg-repeat-count, 4) + var(--dg-scroll-hint, 0) - 1) *
+            var(--dg-gap, 0px)
+        ) / (var(--dg-repeat-count, 2) + var(--dg-scroll-hint, 0))
+    ),
+    var(--dg-min-width, 200px)
+  );
+
+  & > *,
+  ::slotted(*) {
+    scroll-snap-align: var(--dg-scroll-snap-align, start);
+  }
+
+  & > *,
+  ::slotted(*):first-child {
+    scroll-snap-align: start;
+  }
+
+  & > *,
+  ::slotted(*):last-child {
+    scroll-snap-align: end;
+  }
+
+  scrollbar-width: thin;
+}
+
+.is-scrollbar-hidden {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+    height: 0;
+    background: transparent;
+  }
+}

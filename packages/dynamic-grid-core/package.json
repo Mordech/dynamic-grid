@@ -1,0 +1,15 @@
+{
+  "name": "@mordech/dynamic-grid-core",
+  "version": "0.0.0",
+  "license": "MIT",
+  "private": true,
+  "description": "A dynamic grid component",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build-js": "tsc",
+    "build-css": "sass ./lib:./css",
+    "build": "yarn build-js && yarn build-css",
+    "lint": "eslint --ext .js,.ts ./lib",
+    "prepare": "yarn build"
+  }
+}

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + Lit + TS</title>
+    <script type="module" src="/lib/index.ts"></script>
+  </head>
+  <style>
+    body {
+      padding: unset;
+      margin: unset;
+    }
+    div {
+      background-color: #eee;
+      border: 1px solid #ddd;
+      padding: 1rem;
+    }
+    .is-loading {
+      display: none;
+    }
+  </style>
+  <body>
+    <mrd-dynamic-grid
+      class="is-loading"
+      gap="8px"
+      minColumnWidth="16rem"
+      isScroll
+      scrollOptions='{"hint": 0.2, "rows": 3}'
+    >
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+      <div>11</div>
+      <div>12</div>
+      <div>13</div>
+      <div>14</div>
+      <div>15</div>
+      <div>16</div>
+      <div>17</div>
+      <div>18</div>
+    </mrd-dynamic-grid>
+  </body>
+</html>
