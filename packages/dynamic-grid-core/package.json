@@ -15,5 +15,8 @@
     "build": "yarn build-js && yarn build-css",
     "lint": "eslint --ext .js,.ts ./lib",
     "prepare": "yarn build"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
