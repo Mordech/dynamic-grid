@@ -1,6 +1,5 @@
 {
   "name": "@mordech/dynamic-grid-react",
-  "private": true,
   "license": "MIT",
   "version": "0.0.0",
   "type": "module",
@@ -17,7 +16,8 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint ./lib --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "prepare": "yarn build"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -25,5 +25,8 @@
   },
   "devDependencies": {
     "vite": "^4.4.7"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
