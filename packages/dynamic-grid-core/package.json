@@ -1,6 +1,6 @@
 {
   "name": "@mordech/dynamic-grid-core",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "license": "MIT",
   "description": "A dynamic grid component",
   "main": "./dist/index.js",
