@@ -15,7 +15,7 @@ The Dynamic Grid project is split into three packages:
 To install any of the packages, simply include the following script tag in your HTML file:
 
 ```html
-<script src="https://unpkg.com/{package-name}"></script>
+<script src="https://unpkg.com/@mordech/{package-name}"></script>
 ```
 
 Replace `{package-name}` with the name of the package you want to use (`dynamic-grid-core`, `dynamic-grid-web`, or `dynamic-grid-react`).
@@ -23,15 +23,15 @@ Replace `{package-name}` with the name of the package you want to use (`dynamic-
 Alternatively, you can install the packages using `npm` or `yarn`:
 
 ```bash
-npm install dynamic-grid-core
-npm install dynamic-grid-web
-npm install dynamic-grid-react
+npm install @mordech/dynamic-grid-core
+npm install @mordech/dynamic-grid-web
+npm install @mordech/dynamic-grid-react
 ```
 
 ```bash
-yarn add dynamic-grid-core
-yarn add dynamic-grid-web
-yarn add dynamic-grid-react
+yarn add @mordech/dynamic-grid-core
+yarn add @mordech/dynamic-grid-web
+yarn add @mordech/dynamic-grid-react
 ```
 
 ## Usage
