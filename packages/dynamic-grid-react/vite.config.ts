@@ -2,8 +2,10 @@ import react from '@vitejs/plugin-react';
 import { defineConfig } from 'vite';
 import dts from 'vite-plugin-dts';
 
+import { libInjectCss } from 'vite-plugin-lib-inject-css';
+
 export default defineConfig({
-  plugins: [dts(), react()],
+  plugins: [dts(), react(), libInjectCss()],
   css: {
     modules: {
       localsConvention: 'camelCaseOnly',
