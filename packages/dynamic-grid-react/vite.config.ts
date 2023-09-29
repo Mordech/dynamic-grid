@@ -12,10 +12,14 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     lib: {
+      formats: ['es'],
       name: 'dynamic-grid-react',
       entry: {
         index: 'lib/index.ts',
       },
+    },
+    rollupOptions: {
+      external: ['react', 'react/jsx-runtime'],
     },
   },
 });
