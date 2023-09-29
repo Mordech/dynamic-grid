@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.3](https://github.com/Mordech/dynamic-grid/compare/v0.1.2...v0.1.3) (2023-09-29)
+
+### Bug Fixes
+
+- **react:** change build dependencies ([#10](https://github.com/Mordech/dynamic-grid/issues/10)) ([7697e6a](https://github.com/Mordech/dynamic-grid/commit/7697e6a2b4198693b5c84108ef8f6ed0c4272845))
+
 ## [0.1.2](https://github.com/Mordech/dynamic-grid/compare/v0.1.1...v0.1.2) (2023-09-29)
 
 ### Bug Fixes
