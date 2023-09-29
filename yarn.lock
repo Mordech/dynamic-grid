@@ -561,7 +561,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@jridgewell/sourcemap-codec@npm:^1.4.10, @jridgewell/sourcemap-codec@npm:^1.4.14":
+"@jridgewell/sourcemap-codec@npm:^1.4.10, @jridgewell/sourcemap-codec@npm:^1.4.14, @jridgewell/sourcemap-codec@npm:^1.4.15":
   version: 1.4.15
   resolution: "@jridgewell/sourcemap-codec@npm:1.4.15"
   checksum: b881c7e503db3fc7f3c1f35a1dd2655a188cc51a3612d76efc8a6eb74728bef5606e6758ee77423e564092b4a518aba569bbb21c9bac5ab7a35b0c6ae7e344c8
@@ -3079,6 +3079,7 @@ __metadata:
     typescript: ^5.1.6
     vite: ^4.4.7
     vite-plugin-dts: ^3.5.4
+    vite-plugin-lib-inject-css: ^1.3.0
   languageName: unknown
   linkType: soft
 
@@ -5818,6 +5819,15 @@ __metadata:
   version: 10.0.1
   resolution: "lru-cache@npm:10.0.1"
   checksum: 06f8d0e1ceabd76bb6f644a26dbb0b4c471b79c7b514c13c6856113879b3bf369eb7b497dad4ff2b7e2636db202412394865b33c332100876d838ad1372f0181
+  languageName: node
+  linkType: hard
+
+"magic-string@npm:^0.30.2":
+  version: 0.30.4
+  resolution: "magic-string@npm:0.30.4"
+  dependencies:
+    "@jridgewell/sourcemap-codec": ^1.4.15
+  checksum: bef57c926d14e9926c142307c1494cc4bdea28a56601a7624f1a5bcd34a63800e2d8a363e826436ce86104460a63ee76c7c185a6ab1f8f7ee5af2de475b98947
   languageName: node
   linkType: hard
 
@@ -8933,6 +8943,18 @@ __metadata:
     vite:
       optional: true
   checksum: d486220c478e9cb18cbb55867785d4f435bb780e7988e61a877d4cbb1ae6e58a3e85aca67f90a493a75db551afa15be1b0626764d75ed3907ab9084a0c02eaad
+  languageName: node
+  linkType: hard
+
+"vite-plugin-lib-inject-css@npm:^1.3.0":
+  version: 1.3.0
+  resolution: "vite-plugin-lib-inject-css@npm:1.3.0"
+  dependencies:
+    magic-string: ^0.30.2
+    picocolors: ^1.0.0
+  peerDependencies:
+    vite: "*"
+  checksum: 5a6cc49c7b23a86024b433cd4523516db975272ac6c755072d92e0c1be4808b22a36b726c64dcfc528b6f6a2d0d5e892a2b3f5eeba8c7ee6be791739d8202306
   languageName: node
   linkType: hard
 
