@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.4](https://github.com/Mordech/dynamic-grid/compare/v0.1.3...v0.1.4) (2023-09-29)
+
+### Bug Fixes
+
+- **react:** include css import in component ([#11](https://github.com/Mordech/dynamic-grid/issues/11)) ([07bd0be](https://github.com/Mordech/dynamic-grid/commit/07bd0be78fd9c17a5399a029de6d5cb02d9e67ab))
+
 ## [0.1.3](https://github.com/Mordech/dynamic-grid/compare/v0.1.2...v0.1.3) (2023-09-29)
 
 ### Bug Fixes
