@@ -1,4 +1,4 @@
-import {
+import React, {
   CSSProperties,
   forwardRef,
   useCallback,
@@ -12,14 +12,14 @@ import classnames from 'classnames';
 
 import styles from '@mordech/dynamic-grid-core/lib/core.module.scss';
 
-interface ScrollProps {
+export interface ScrollProps {
   hint?: number;
   hideScrollbar?: boolean;
   rows?: number;
   scrollSnapAlign?: 'start' | 'center' | 'end' | 'none';
 }
 
-type DynamicGridProps = {
+export type DynamicGridProps = {
   minColumnWidth: string;
   gridType?: 'auto-fill' | 'auto-fit';
   gap?: string;
