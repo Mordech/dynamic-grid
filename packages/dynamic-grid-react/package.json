@@ -20,10 +20,10 @@
     "prepare": "yarn build"
   },
   "dependencies": {
-    "react": "^18.2.0"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "react-dom": "^18.2.0",
     "vite": "^4.4.7"
   },
   "publishConfig": {
