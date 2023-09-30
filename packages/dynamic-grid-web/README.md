@@ -1,6 +1,6 @@
 # DynamicGrid Web Component
 
-The `MrdDynamicGridElement` component is a web component built with LitElement that allows for dynamic grid layouts. It uses the `@mordech/dynamic-grid-core` library to calculate the number of columns based on the available space and the minimum column width.
+The `mrd-dynamic-grid` component is a web component built with LitElement that allows for dynamic grid layouts. It uses the [`@mordech/dynamic-grid-core`](https://www.npmjs.com/package/@mordech/dynamic-grid-core) library to calculate the number of columns based on the available space and the minimum column width.
 
 ## Installation
 
@@ -15,10 +15,12 @@ npm install @mordech/dynamic-grid-core @mordech/dynamic-grid-element
 To use the `MrdDynamicGridElement` component, you can import it and use it like any other web component:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <script type="module" src="@mordech/dynamic-grid-web"></script>
+    <script type="module">
+      import '@mordech/dynamic-grid-web';
+    </script>
   </head>
   <body>
     <mrd-dynamic-grid
