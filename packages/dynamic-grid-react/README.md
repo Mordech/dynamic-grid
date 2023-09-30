@@ -1,6 +1,6 @@
 # DynamicGrid Component
 
-The `DynamicGrid` component is a React component that allows for dynamic grid layouts. It uses the `@mordech/dynamic-grid-core` library to calculate the number of columns based on the available space and the minimum column width.
+The `DynamicGrid` component is a React component that allows for dynamic grid layouts. It uses the [`@mordech/dynamic-grid-core`](https://www.npmjs.com/package/@mordech/dynamic-grid-core) library to calculate the number of columns based on the available space and the minimum column width.
 
 ## Installation
 

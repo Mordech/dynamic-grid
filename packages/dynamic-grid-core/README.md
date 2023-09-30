@@ -21,19 +21,20 @@ npm install @mordech/dynamic-grid-core
 This is a function that calculates the number of columns that can fit in a given space, taking into account the minimum width of each column, the width of the elements, and any gaps between the columns.
 
 ### Usage
+
 To use this function, import it into your project and call it with an object that contains the following properties:
 
 - `minWidth`: The minimum width of each column.
 
-- `elementWidth`: The width of the elements that will be placed in the columns.
+- `elementWidth`: The width of the container element.
 
-- `gap`: The gap between each column (optional, defaults to 0).
+- `gap`: The gap between each column in px (optional, defaults to 0).
 
-- `dividedBy`: The number to divide the number of columns by (optional, defaults to 1).
+- `dividedBy`: The number to divide the number of columns by (optional, defaults to 1). For example if you want the number of columns to be even, you can set this to 2.
 
 - `maxColumns`: The maximum number of columns that can be displayed (optional, defaults to Infinity).
 
-- `scrollHint`: A number between 0 and 1 that indicates how much of the next column should be shown in a scroll (optional, defaults to 0).
+- `scrollHint`: A number between 0 and 1 that indicates how much of the next column should be shown in a scroll (optional, defaults to 0). For example, if you want to show half of the next column, you can set this to 0.5.
 
 The function returns the number of columns that can fit in the given space.
 
