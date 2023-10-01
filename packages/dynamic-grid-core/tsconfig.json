@@ -4,5 +4,11 @@
     "outDir": "./dist",
     "declaration": true
   },
-  "include": ["lib"]
+  "include": ["./src/**/*.ts"],
+  "exclude": ["./src/**/*.test.ts", "./src/**/*.spec.ts"],
+  "references": [
+    {
+      "path": "./tsconfig.test.json"
+    }
+  ]
 }

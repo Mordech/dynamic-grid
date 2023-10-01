@@ -79,18 +79,18 @@ To import the `core.css` file into your project:
 import '@mordech/dynamic-grid-core/css/core.css';
 ```
 
-To use the `.grid` class, add it to the container element of the grid:
+To use the `.dg-grid` class, add it to the container element of the grid:
 
 ```html
-<div class="grid">
+<div class="dg-grid">
   <!-- Grid elements -->
 </div>
 ```
 
-To use the `.is-scroll` class, add it to the container element of the grid when the grid is scrollable:
+To use the `.dg-is-scroll` class, add it to the container element of the grid when the grid is scrollable:
 
 ```html
-<div class="grid is-scroll">
+<div class="dg-grid dg-is-scroll">
   <!-- Grid elements -->
 </div>
 ```
@@ -110,7 +110,7 @@ These custom properties are used to define the grid layout and scroll behavior o
 For example, to set the number of columns to 3 and the gap between elements to 10 pixels, you could add the following CSS:
 
 ```css
-.grid {
+.dg-grid {
   --dg-repeat-count: 3;
   --dg-gap: 10px;
 }
@@ -124,12 +124,12 @@ If you are using CSS modules in your project, you can import the `core.module.cs
 import '@mordech/dynamic-grid-core/css/core.module.css';
 ```
 
-You can then use the `grid` and `isScroll` classes in your code:
+You can then use the `dg-grid` and `dg-is-scroll` classes in your code:
 
 ```js
 import styles from '@mordech/dynamic-grid-core/css/core.module.css';
 
-<div className={styles.grid}>
+<div className={styles.dgGrid}>
   <!-- Grid elements -->
 </div>
 ```

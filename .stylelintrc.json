@@ -1,0 +1,10 @@
+{
+  "extends": ["stylelint-config-standard", "stylelint-config-standard-scss"],
+  "files": "**/*.scss",
+  "ignoreFiles": "**/*.{js,jsx,ts,tsx}",
+  "rules": {
+    "scss/operator-no-newline-after": null,
+    "selector-class-pattern": "dg.+",
+    "custom-property-pattern": "dg.+"
+  }
+}

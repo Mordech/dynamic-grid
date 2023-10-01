@@ -17,6 +17,8 @@
     "build": "vite build",
     "lint": "eslint ./lib --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
+    "test": "vitest",
+    "test:ci": "vitest --run",
     "prepare": "yarn build"
   },
   "dependencies": {
@@ -24,7 +26,8 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "vite": "^4.4.7"
+    "vite": "^4.4.7",
+    "vitest": "^0.34.6"
   },
   "publishConfig": {
     "access": "public"
