@@ -1,4 +1,4 @@
-.grid {
+.dg-grid {
   display: grid;
   grid-template-columns: repeat(
     var(--dg-repeat-count, auto-fit),
@@ -9,7 +9,7 @@
 }
 
 /* dose'nt work with --dg-repeat-count: auto-fit/fill */
-.is-scroll {
+.dg-is-scroll {
   scroll-behavior: smooth;
   overflow-x: scroll;
   overflow-y: visible;
@@ -46,9 +46,10 @@
   scrollbar-width: thin;
 }
 
-.is-scrollbar-hidden {
+.dg-is-scrollbar-hidden {
   scrollbar-width: none;
   -ms-overflow-style: none;
+
   &::-webkit-scrollbar {
     display: none;
     height: 0;

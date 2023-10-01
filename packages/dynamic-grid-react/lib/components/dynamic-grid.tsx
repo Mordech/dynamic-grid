@@ -70,6 +70,8 @@ export const DynamicGrid = forwardRef(
         }
       };
 
+      handleResize();
+
       const resizeObserver = new ResizeObserver(handleResize);
 
       resizeObserver.observe(gridRef.current!);
@@ -91,9 +93,9 @@ export const DynamicGrid = forwardRef(
     return (
       <div
         ref={mergedRef}
-        className={classnames(styles.grid, {
-          [styles.isScroll]: isScroll || scrollOptions,
-          [styles.isScrollbarHidden]: scrollOptions?.hideScrollbar,
+        className={classnames(styles.dgGrid, {
+          [styles.dgIsScroll]: isScroll || scrollOptions,
+          [styles.dgIsScrollbarHidden]: scrollOptions?.hideScrollbar,
         })}
         style={styleMap}
         {...rest}

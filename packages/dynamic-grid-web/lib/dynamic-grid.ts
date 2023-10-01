@@ -54,15 +54,15 @@ export class MrdDynamicGridElement extends LitElement {
     };
 
     const classes = {
-      'is-scroll': !!this.isScroll || !!this.scrollOptions,
-      'is-scrollbar-hidden': !!this.scrollOptions?.hideScrollbar,
+      'dg-is-scroll': !!this.isScroll || !!this.scrollOptions,
+      'dg-is-scrollbar-hidden': !!this.scrollOptions?.hideScrollbar,
     };
 
     return html`
       <div
         part="grid"
         ${ref(this.gridRef)}
-        class="grid ${classMap(classes)}"
+        class="dg-grid ${classMap(classes)}"
         style=${styleMap(styles)}
       >
         <slot></slot>
@@ -74,7 +74,7 @@ export class MrdDynamicGridElement extends LitElement {
     this.updateComplete.then(() => {
       this.resizeController.observe(this.gridRef.value!);
     });
-    this.classList.remove('is-loading');
+    this.classList.remove('dg-is-loading');
   }
 
   private getColumns() {
