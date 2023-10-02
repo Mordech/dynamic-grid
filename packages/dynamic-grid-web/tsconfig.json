@@ -3,10 +3,9 @@
   "compilerOptions": {
     /* Bundler mode */
     "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true
+    "isolatedModules": true
   },
-  "include": ["lib"]
+  "include": ["lib"],
+  "references": [{ "path": "./tsconfig.test.json" }]
 }

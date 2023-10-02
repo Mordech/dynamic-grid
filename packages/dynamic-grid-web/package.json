@@ -9,6 +9,8 @@
     "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint --ext .js,.ts ./lib",
+    "test": "vitest",
+    "test:ci": "vitest --run",
     "prepare": "yarn build"
   },
   "repository": {

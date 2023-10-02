@@ -22,7 +22,7 @@ export class MrdDynamicGridElement extends LitElement {
   @property({ type: String })
   minColumnWidth: string = '200px';
   @property({ type: String })
-  gridType?: 'auto-fill' | 'auto-fit';
+  gridType: 'auto-fill' | 'auto-fit' = 'auto-fill';
   @property({ type: String })
   gap?: string;
   @property({ type: Number })
@@ -41,7 +41,7 @@ export class MrdDynamicGridElement extends LitElement {
   }
 
   private resizeController = new ResizeController(this, {});
-  private gridRef: Ref<HTMLDivElement> = createRef();
+  public gridRef: Ref<HTMLDivElement> = createRef();
 
   render() {
     const styles = {
