@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { DynamicGrid } from '.';
 
 function App() {

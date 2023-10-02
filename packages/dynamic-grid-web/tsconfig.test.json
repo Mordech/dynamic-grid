@@ -1,0 +1,19 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "composite": true,
+    "types": ["vitest/globals", "node"]
+  },
+  "include": [
+    "vite.config.ts",
+    "lib/**/*.ts",
+    "lib/**/*.test.ts",
+    "lib/**/*.spec.ts",
+    "lib/**/*.test.tsx",
+    "lib/**/*.spec.tsx",
+    "lib/**/*.test.js",
+    "lib/**/*.spec.js",
+    "lib/**/*.test.jsx",
+    "lib/**/*.spec.jsx"
+  ]
+}

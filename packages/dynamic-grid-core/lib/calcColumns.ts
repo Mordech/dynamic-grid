@@ -18,6 +18,10 @@ export const calcColumns = ({
   maxColumns = Infinity,
   scrollHint = 0,
 }: CalcColumnParams): number => {
+  if (minWidth === 0 || elementWidth === 0 || elementWidth < minWidth) {
+    return 1;
+  }
+
   const calcBase = Math.floor(
     (elementWidth + gap - minWidth * scrollHint) / (minWidth + gap),
   );

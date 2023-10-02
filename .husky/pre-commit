@@ -1,4 +1,4 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-yarn lerna run build,lint
+yarn lerna run build,lint,lint:css,test:ci
