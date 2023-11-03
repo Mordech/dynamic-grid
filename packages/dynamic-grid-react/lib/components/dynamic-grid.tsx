@@ -65,9 +65,9 @@ export const DynamicGrid = forwardRef(
 
     useLayoutEffect(() => {
       const handleResize = () => {
-        if (maxColumns || dividedBy || isScroll || scrollOptions) {
-          setColumns(getColumns);
-        }
+        maxColumns || dividedBy || isScroll || scrollOptions
+          ? setColumns(getColumns)
+          : setColumns(NaN);
       };
 
       handleResize();
