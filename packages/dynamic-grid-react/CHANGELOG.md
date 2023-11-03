@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.1](https://github.com/Mordech/dynamic-grid/compare/v0.2.0...v0.2.1) (2023-11-03)
+
+### Bug Fixes
+
+- **react:** unset columns state if conditions are met ([533f256](https://github.com/Mordech/dynamic-grid/commit/533f256c3789a4f2d260c8a495deeb0d7b89096a))
+
 # [0.2.0](https://github.com/Mordech/dynamic-grid/compare/v0.1.5...v0.2.0) (2023-10-02)
 
 ### Features
