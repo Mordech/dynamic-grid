@@ -6,13 +6,7 @@ export default defineConfig({
   integrations: [react()],
   vite: {
     ssr: {
-      noExternal: [
-        '@astrojs/react',
-        '@types/react',
-        '@types/react-dom',
-        '@astrojs/check',
-        'typescript',
-      ],
+      noExternal: ['@astrojs/react'],
     },
   },
 });
