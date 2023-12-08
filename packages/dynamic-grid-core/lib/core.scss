@@ -11,8 +11,7 @@
 /* dose'nt work with --dg-repeat-count: auto-fit/fill */
 .dg-is-scroll {
   scroll-behavior: smooth;
-  overflow-x: scroll;
-  overflow-y: visible;
+  overflow: scroll visible;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
   grid-auto-flow: column;
