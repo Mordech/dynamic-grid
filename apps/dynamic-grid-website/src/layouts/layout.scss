@@ -1,0 +1,22 @@
+:root {
+  --dg-accent: 136, 58, 234;
+  --dg-accent-light: 224, 204, 250;
+  --dg-accent-dark: 49, 10, 101;
+  --dg-accent-gradient: linear-gradient(
+    45deg,
+    rgb(var(--dg-accent)),
+    rgb(var(--dg-accent-light)) 30%,
+    white 60%
+  );
+}
+
+html {
+  font-family: system-ui, sans-serif;
+  background: #13151a;
+  background-size: 224px;
+}
+
+code {
+  font-family: Menlo, Monaco, 'Lucida Console', 'Liberation Mono',
+    'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New', monospace;
+}

@@ -3,6 +3,7 @@
     "stylelint.vscode-stylelint",
     "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode",
-    "syler.sass-indented"
+    "syler.sass-indented",
+    "astro-build.astro-vscode"
   ]
 }
