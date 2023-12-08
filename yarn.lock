@@ -4671,14 +4671,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "dynamic-grid-website@workspace:apps/dynamic-grid-website"
   dependencies:
-    "@astrojs/check": ^0.3.1
-    "@astrojs/react": ^3.0.7
-    "@types/react": ^18.2.42
-    "@types/react-dom": ^18.2.17
     astro: ^4.0.3
-    react: ^18.2.0
-    react-dom: ^18.2.0
-    typescript: ^5.3.3
   languageName: unknown
   linkType: soft
 
@@ -4686,6 +4679,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "dynamic-grid@workspace:."
   dependencies:
+    "@astrojs/check": ^0.3.1
+    "@astrojs/react": ^3.0.7
     "@commitlint/config-conventional": ^18.4.3
     "@lit-labs/observers": ^2.0.2
     "@mordech/dynamic-grid-core": "*"
@@ -4696,6 +4691,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": ^6.13.2
     "@typescript-eslint/parser": ^6.13.2
     "@vitejs/plugin-react": ^4.2.1
+    astro: ^4.0.3
     classnames: ^2.3.2
     commitlint: ^18.4.3
     eslint: ^8.55.0

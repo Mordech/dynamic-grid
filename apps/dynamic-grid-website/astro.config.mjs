@@ -1,8 +1,18 @@
+import react from '@astrojs/react';
 import { defineConfig } from 'astro/config';
-
-import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [react()]
+  integrations: [react()],
+  vite: {
+    ssr: {
+      noExternal: [
+        '@astrojs/react',
+        '@types/react',
+        '@types/react-dom',
+        '@astrojs/check',
+        'typescript',
+      ],
+    },
+  },
 });
