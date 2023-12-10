@@ -54,7 +54,7 @@ describe('DynamicGrid', () => {
     expect(
       getComputedStyle(getByTestId('dynamic-grid')).cssText,
     ).toMatchInlineSnapshot(
-      '"display: grid; grid-template-columns: repeat(var(--dg-repeat-count, auto-fit), minmax(var(--dg-min-width, 200px), 1fr)); gap: var(--dg-gap, unset); overflow: hidden; --dg-repeat-count: auto-fill; --dg-min-width: 20px; visibility: visible; pointer-events: auto; background-color: rgba(0, 0, 0, 0); border-block-start-color: CanvasText; border-block-end-color: CanvasText; border-inline-start-color: CanvasText; border-inline-end-color: CanvasText; caret-color: auto;"',
+      `"display: grid; grid-template-columns: repeat(var(--dg-repeat-count, auto-fit), minmax(var(--dg-min-width, 200px), 1fr)); gap: var(--dg-gap, unset); overflow: hidden; --dg-repeat-count: auto-fill; --dg-min-width: 20px; visibility: visible; pointer-events: auto; background-color: rgba(0, 0, 0, 0); border-block-start-color: CanvasText; border-block-end-color: CanvasText; border-inline-start-color: CanvasText; border-inline-end-color: CanvasText; caret-color: auto;"`,
     );
   });
 
@@ -91,7 +91,7 @@ describe('DynamicGrid', () => {
     expect(
       getComputedStyle(getByTestId('dynamic-grid')).cssText,
     ).toMatchInlineSnapshot(
-      `"display: grid; gap: var(--dg-gap, unset); overflow: scroll visible; scroll-behavior: smooth; scroll-snap-type: x mandatory; grid-auto-flow: column; grid-template-rows: repeat(var(--dg-scroll-rows, 1), auto); grid-auto-columns: max((100% - (var(--dg-repeat-count, 4) + var(--dg-scroll-hint, 0) - 1) * var(--dg-gap, 0px)) / (var(--dg-repeat-count, 2) + var(--dg-scroll-hint, 0)), var(--dg-min-width, 200px)); scrollbar-width: thin; --dg-repeat-count: 2; --dg-min-width: 20px; --dg-gap: 10px; --dg-scroll-hint: 0.5; visibility: visible; pointer-events: auto; background-color: rgba(0, 0, 0, 0); border-block-start-color: CanvasText; border-block-end-color: CanvasText; border-inline-start-color: CanvasText; border-inline-end-color: CanvasText; caret-color: auto;"`,
+      `"display: grid; gap: var(--dg-gap, unset); overflow: auto hidden; scroll-behavior: smooth; scroll-snap-type: x mandatory; grid-auto-flow: column; grid-template-rows: repeat(var(--dg-scroll-rows, 1), 1fr); grid-auto-columns: max((100% - (var(--dg-repeat-count, 4) + var(--dg-scroll-hint, 0) - 1) * var(--dg-gap, 0px)) / (var(--dg-repeat-count, 2) + var(--dg-scroll-hint, 0)), var(--dg-min-width, 200px)); scrollbar-width: thin; --dg-repeat-count: 2; --dg-min-width: 20px; --dg-gap: 10px; --dg-scroll-hint: 0.5; visibility: visible; pointer-events: auto; background-color: rgba(0, 0, 0, 0); border-block-start-color: CanvasText; border-block-end-color: CanvasText; border-inline-start-color: CanvasText; border-inline-end-color: CanvasText; caret-color: auto;"`,
     );
   });
 
