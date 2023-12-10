@@ -1,3 +1,7 @@
+:host {
+  overflow: hidden;
+}
+
 .dg-grid {
   display: grid;
   grid-template-columns: repeat(
@@ -11,11 +15,10 @@
 /* dose'nt work with --dg-repeat-count: auto-fit/fill */
 .dg-is-scroll {
   scroll-behavior: smooth;
-  overflow: scroll visible;
+  overflow: auto hidden;
   scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
   grid-auto-flow: column;
-  grid-template-rows: repeat(var(--dg-scroll-rows, 1), auto);
+  grid-template-rows: repeat(var(--dg-scroll-rows, 1), 1fr);
   grid-template-columns: unset;
   grid-auto-columns: max(
     calc(
@@ -27,17 +30,17 @@
     var(--dg-min-width, 200px)
   );
 
-  & > *,
+  & *,
   ::slotted(*) {
     scroll-snap-align: var(--dg-scroll-snap-align, start);
   }
 
-  & > *,
+  & *,
   ::slotted(*):first-child {
     scroll-snap-align: start;
   }
 
-  & > *,
+  & *,
   ::slotted(*):last-child {
     scroll-snap-align: end;
   }
