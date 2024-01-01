@@ -5,7 +5,7 @@ import { DynamicGrid } from '.';
 function App() {
   return (
     <>
-      <DynamicGrid minColumnWidth="200px">
+      <DynamicGrid minColumnWidth="150px" isScroll scrollOptions={{ rows: 3 }}>
         <div>1</div>
         <div>2</div>
         <div>3</div>

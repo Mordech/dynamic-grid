@@ -40,6 +40,7 @@ export const DynamicGrid = forwardRef(
       isScroll,
       scrollOptions,
       dividedBy,
+      className,
       ...rest
     }: DynamicGridProps,
     ref,
@@ -93,7 +94,7 @@ export const DynamicGrid = forwardRef(
     return (
       <div
         ref={mergedRef}
-        className={classnames(styles.dgGrid, {
+        className={classnames(className, styles.dgGrid, {
           [styles.dgIsScroll]: isScroll || scrollOptions,
           [styles.dgIsScrollbarHidden]: scrollOptions?.hideScrollbar,
         })}

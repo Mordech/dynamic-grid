@@ -2,7 +2,7 @@ name: Build & test affected
 
 on:
   pull_request:
-    branches: [ "main" ]
+    branches: ['main']
 
 jobs:
   status-checks:
@@ -15,7 +15,9 @@ jobs:
           fetch-depth: 0
 
       - name: Install dependencies
-        run: yarn install --immutable --immutable-cache --check-cache
+        run: |
+          corepack enable
+          yarn install --immutable --immutable-cache --check-cache
 
       - name: Build & test affected
         run: yarn lerna run build,lint,lint:css,test:ci --since=origin/main

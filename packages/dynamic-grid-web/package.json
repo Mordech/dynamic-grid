@@ -4,6 +4,7 @@
   "version": "0.2.0",
   "type": "module",
   "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -22,12 +23,12 @@
     "dist"
   ],
   "dependencies": {
-    "@lit-labs/observers": "^2.0.0",
-    "lit": "^2.7.6"
+    "@lit-labs/observers": "^2.0.2",
+    "lit": "^3.1.0"
   },
   "devDependencies": {
-    "vite": "^4.4.7",
-    "vitest": "^0.34.6"
+    "vite": "^5.0.10",
+    "vitest": "^1.1.1"
   },
   "publishConfig": {
     "access": "public"

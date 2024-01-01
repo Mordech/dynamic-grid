@@ -8,7 +8,7 @@ import { classMap } from 'lit/directives/class-map.js';
 import { createRef, Ref, ref } from 'lit/directives/ref.js';
 import { styleMap } from 'lit/directives/style-map.js';
 
-interface ScrollProps {
+export interface ScrollProps {
   hint?: number;
   hideScrollbar?: boolean;
   rows?: number;
@@ -77,7 +77,7 @@ export class MrdDynamicGridElement extends LitElement {
     this.classList.remove('dg-is-loading');
   }
 
-  private getColumns() {
+  getColumns() {
     return calcColumns({
       elementWidth: this.gridRef.value?.clientWidth || this.offsetWidth,
       minWidth: convertUnit(this.minColumnWidth, 'px'),
