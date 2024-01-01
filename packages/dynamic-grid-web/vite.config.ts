@@ -13,6 +13,15 @@ export default defineConfig({
       },
     },
     rollupOptions: {
+      output: {
+        globals: {
+          lit: 'lit',
+          'lit/decorators.js': 'lit',
+          'lit/directives/class-map.js': 'lit',
+          'lit/directives/ref.js': 'lit',
+          'lit/directives/style-map.js': 'lit',
+        },
+      },
       external: /^lit/,
     },
   },
