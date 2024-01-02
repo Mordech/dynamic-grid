@@ -1215,13 +1215,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mordech/vite-lit-loader@npm:^0.33.3":
-  version: 0.33.3
-  resolution: "@mordech/vite-lit-loader@npm:0.33.3"
+"@mordech/vite-lit-loader@npm:^0.33.4":
+  version: 0.33.4
+  resolution: "@mordech/vite-lit-loader@npm:0.33.4"
   dependencies:
     cheerio: 1.0.0-rc.12
     tslib: ^2.6.2
-  checksum: df4c9a93603df66f9af1aea53b56c8762e8cf5f8f113b635000b20a4e2b5fd0e2e917f189a5cedce5aa5ffbdf69dc71d38757e6a5d36b2173bd763b46a0c0ce1
+  checksum: 8d1f46bca909824894f6665d1288a4054c2b7ea899e3bb45a9e8088b67fbf3162ed43586dea852ee482ec79269282ea3fdb9b1d416bfafcab6c80d0a47ad6cf0
   languageName: node
   linkType: hard
 
@@ -4123,7 +4123,7 @@ __metadata:
     "@mordech/dynamic-grid-react": "*"
     "@mordech/dynamic-grid-web": "*"
     "@mordech/tokens": ^0.33.0
-    "@mordech/vite-lit-loader": ^0.33.3
+    "@mordech/vite-lit-loader": ^0.33.4
     "@mordech/web-components": ^0.33.2
     "@testing-library/react": ^14.1.2
     "@types/react": ^18.2.46

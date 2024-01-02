@@ -25,7 +25,7 @@
     "@mordech/dynamic-grid-react": "*",
     "@mordech/dynamic-grid-web": "*",
     "@mordech/tokens": "^0.33.0",
-    "@mordech/vite-lit-loader": "^0.33.3",
+    "@mordech/vite-lit-loader": "^0.33.4",
     "@mordech/web-components": "^0.33.2",
     "@testing-library/react": "^14.1.2",
     "@types/react": "^18.2.46",
