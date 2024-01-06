@@ -1,0 +1,9 @@
+{
+  "extends": ["stylelint-config-standard"],
+  "customSyntax": "postcss-styled-syntax",
+  "files": ["**/*.{ts,tsx,js,jsx}"],
+  "rules": {
+    "selector-class-pattern": "(dg|mrd).+",
+    "custom-property-pattern": "(dg|mrd).+"
+  }
+}

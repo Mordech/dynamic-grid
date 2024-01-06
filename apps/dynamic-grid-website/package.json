@@ -9,6 +9,10 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "vite": "^5.0.10"
+    "@mordech/dynamic-grid-core": "*",
+    "@mordech/dynamic-grid-react": "*",
+    "@mordech/dynamic-grid-web": "*",
+    "typescript": "5.3.3",
+    "vite": "^5.0.11"
   }
 }

@@ -1,51 +1,177 @@
 import { useState } from 'react';
 import styled from '@emotion/styled';
+import { DynamicGrid } from '@mordech/dynamic-grid-react';
 
-import { Button } from './components/button';
+import {
+  Button,
+  FeaturedCard,
+  GithubBadge,
+  MusicCard,
+  TestimonialCard,
+  ToggleThemeButton,
+} from './components';
 
-import './styles.scss';
-
+/**
+ * @deprecated
+ */
 const ButtonContainer = styled.div`
   display: flex;
   gap: 0.5rem;
 `;
 
+/**
+ * @deprecated
+ */
+export const DeleteThisContainer = styled.div`
+  display: flex;
+  padding: 2rem;
+  gap: 4rem;
+  flex-direction: column;
+`;
+
 function App() {
-  const [isDisabled, setIsDisabled] = useState(false);
+  const [isDisabled, setIsDisabled] = useState(true);
+
   return (
-    <ButtonContainer>
-      <Button
-        disabled={isDisabled}
-        onClick={() => setIsDisabled(!isDisabled)}
-        radius="round"
-        variant="tonal"
-        color="primary"
-        size="compact"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="currentColor"
-          viewBox="0 0 24 24"
+    <DeleteThisContainer>
+      <GithubBadge href="#" />
+      <ToggleThemeButton size="compact" />
+
+      <ButtonContainer>
+        <Button
+          aria-label="Previous"
+          disabled={isDisabled}
+          onClick={() => setIsDisabled(!isDisabled)}
+          radius="round"
+          variant="tonal"
+          size="compact"
         >
-          <path d="m7.825 13 5.6 5.6L12 20l-8-8 8-8 1.425 1.4-5.6 5.6H20v2H7.825Z" />
-        </svg>
-      </Button>
-      <Button
-        onClick={() => setIsDisabled(!isDisabled)}
-        radius="round"
-        variant="tonal"
-        color="primary"
-        size="compact"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="currentColor"
-          viewBox="0 0 24 24"
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path d="m7.825 13 5.6 5.6L12 20l-8-8 8-8 1.425 1.4-5.6 5.6H20v2H7.825Z" />
+          </svg>
+        </Button>
+
+        <Button
+          aria-label="Next"
+          onClick={() => setIsDisabled(!isDisabled)}
+          radius="round"
+          variant="tonal"
+          size="compact"
         >
-          <path d="M16.175 13H4v-2h12.175l-5.6-5.6L12 4l8 8-8 8-1.425-1.4 5.6-5.6Z" />
-        </svg>
-      </Button>
-    </ButtonContainer>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path d="M16.175 13H4v-2h12.175l-5.6-5.6L12 4l8 8-8 8-1.425-1.4 5.6-5.6Z" />
+          </svg>
+        </Button>
+      </ButtonContainer>
+
+      <DynamicGrid
+        minColumnWidth="20rem"
+        gap="2rem 1rem"
+        isScroll
+        scrollOptions={{ rows: 2, hideScrollbar: true }}
+        dividedBy={2}
+      >
+        <TestimonialCard
+          avatar="https://loremflickr.com/72/72/person?lock=1"
+          name="John Doe"
+          location="New York City, NY"
+          testimonial="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, libero et aliquam ultrices, nunc elit tincidunt urna, ac lacinia justo nisl sed nunc."
+        />
+        <TestimonialCard
+          avatar="https://loremflickr.com/72/72/person?lock=2"
+          name="Jane Smith"
+          location="Los Angeles, CA"
+          testimonial="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, libero et aliquam ultrices, nunc elit tincidunt urna, ac lacinia justo nisl sed nunc."
+        />
+        <TestimonialCard
+          avatar="https://loremflickr.com/72/72/person?lock=3"
+          name="Bob Johnson"
+          location="Chicago, IL"
+          testimonial="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, libero et aliquam ultrices, nunc elit tincidunt urna, ac lacinia justo nisl sed nunc."
+        />
+        <TestimonialCard
+          avatar="https://loremflickr.com/72/72/person?lock=4"
+          name="Mary Williams"
+          location="Houston, TX"
+          testimonial="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, libero et aliquam ultrices, nunc elit tincidunt urna, ac lacinia justo nisl sed nunc."
+        />
+        <TestimonialCard
+          avatar="https://loremflickr.com/72/72/person?lock=5"
+          name="James Brown"
+          location="Philadelphia, PA"
+          testimonial="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, libero et aliquam ultrices, nunc elit tincidunt urna, ac lacinia justo nisl sed nunc."
+        />
+        <TestimonialCard
+          avatar="https://loremflickr.com/72/72/person?lock=6"
+          name="Patricia Jones"
+          location="Phoenix, AZ"
+          testimonial="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, libero et aliquam ultrices, nunc elit tincidunt urna, ac lacinia justo nisl sed nunc."
+        />
+        <TestimonialCard
+          avatar="https://loremflickr.com/72/72/person?lock=7"
+          name="Michael Miller"
+          location="San Antonio, TX"
+          testimonial="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, libero et aliquam ultrices, nunc elit tincidunt urna, ac lacinia justo nisl sed nunc."
+        />
+        <TestimonialCard
+          avatar="https://loremflickr.com/72/72/person?lock=8"
+          name="Linda Davis"
+          location="San Diego, CA"
+          testimonial="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, libero et aliquam ultrices, nunc elit tincidunt urna, ac lacinia justo nisl sed nunc."
+        />
+        <TestimonialCard
+          avatar="https://loremflickr.com/72/72/person?lock=9"
+          name="Robert Wilson"
+          location="Dallas, TX"
+          testimonial="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, libero et aliquam ultrices, nunc elit tincidunt urna, ac lacinia justo nisl sed nunc."
+        />
+      </DynamicGrid>
+
+      <DynamicGrid minColumnWidth="15rem" gap="1rem">
+        <FeaturedCard
+          backgroundImage="url(https://loremflickr.com/600/600/flower?lock=1)"
+          description="Enigmatic Oasis Discovered in the Heart of the Sahara Desert!"
+        />
+
+        <FeaturedCard
+          backgroundImage="url(https://loremflickr.com/600/600/flower?lock=3)"
+          description="Mystical Underwater City Unearthed in the Pacific Depths!"
+        />
+      </DynamicGrid>
+
+      <DynamicGrid minColumnWidth="10rem" gap="1rem">
+        <MusicCard
+          variant="album"
+          src="https://loremflickr.com/320/320/abstract?lock=1"
+          cardInfo={{ artist: 'John Doe', albumName: 'Awesome Album' }}
+        />
+        <MusicCard
+          variant="album"
+          src="https://loremflickr.com/320/320/abstract?lock=4"
+          cardInfo={{ artist: 'Jane Smith', albumName: 'Lonesome' }}
+        />
+      </DynamicGrid>
+      <DynamicGrid minColumnWidth="7rem" gap="1rem">
+        <MusicCard
+          variant="artist"
+          src="https://loremflickr.com/320/320/music_artist?lock=1"
+          cardInfo={{ artist: 'Jane Smith' }}
+        />
+        <MusicCard
+          variant="artist"
+          src="https://loremflickr.com/320/320/music_artist?lock=2"
+          cardInfo={{ artist: 'Bob Johnson' }}
+        />
+      </DynamicGrid>
+    </DeleteThisContainer>
   );
 }
 
