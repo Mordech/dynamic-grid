@@ -6,5 +6,15 @@
     "moduleResolution": "bundler",
     "allowSyntheticDefaultImports": true
   },
+  "exclude": [
+    "lib/**/*.test.ts",
+    "lib/**/*.spec.ts",
+    "lib/**/*.test.tsx",
+    "lib/**/*.spec.tsx",
+    "lib/**/*.test.js",
+    "lib/**/*.spec.js",
+    "lib/**/*.test.jsx",
+    "lib/**/*.spec.jsx"
+  ],
   "include": ["vite.config.ts"]
 }

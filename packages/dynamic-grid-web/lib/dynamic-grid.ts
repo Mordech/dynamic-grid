@@ -1,7 +1,10 @@
 import { ResizeController } from '@lit-labs/observers/resize-controller.js';
-import { calcColumns } from '@mordech/dynamic-grid-core/lib';
+import {
+  calcColumns,
+  convertUnit,
+  getHorizontalGap,
+} from '@mordech/dynamic-grid-core/lib';
 import styles from '@mordech/dynamic-grid-core/lib/core.scss?lit';
-import { convertUnit } from '@mordech/dynamic-grid-core/lib/utils/unit-converter.js';
 import { html, LitElement } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
@@ -23,6 +26,8 @@ export class MrdDynamicGridElement extends LitElement {
   minColumnWidth: string = '200px';
   @property({ type: String })
   gridType: 'auto-fill' | 'auto-fit' = 'auto-fill';
+  @property({ type: Boolean })
+  shrink?: boolean = true;
   @property({ type: String })
   gap?: string;
   @property({ type: Number })
@@ -48,6 +53,7 @@ export class MrdDynamicGridElement extends LitElement {
       '--dg-repeat-count': this.repeatCount,
       '--dg-min-width': this.minColumnWidth,
       '--dg-gap': this.gap,
+      '--dg-gap-inline': this.gap ? getHorizontalGap(this.gap) : undefined,
       '--dg-scroll-hint': this.scrollOptions?.hint,
       '--dg-scroll-snap-align': this.scrollOptions?.scrollSnapAlign,
       '--dg-scroll-rows': this.scrollOptions?.rows,
@@ -56,6 +62,7 @@ export class MrdDynamicGridElement extends LitElement {
     const classes = {
       'dg-is-scroll': !!this.isScroll || !!this.scrollOptions,
       'dg-is-scrollbar-hidden': !!this.scrollOptions?.hideScrollbar,
+      'dg-is-shrink': !!this.shrink,
     };
 
     return html`
@@ -81,7 +88,7 @@ export class MrdDynamicGridElement extends LitElement {
     return calcColumns({
       elementWidth: this.gridRef.value?.clientWidth || this.offsetWidth,
       minWidth: convertUnit(this.minColumnWidth, 'px'),
-      gap: this.gap ? convertUnit(this.gap, 'px') : undefined,
+      gap: this.gap ? convertUnit(getHorizontalGap(this.gap), 'px') : undefined,
       dividedBy: this.dividedBy,
       maxColumns: this.maxColumns,
       scrollHint: this.scrollOptions?.hint,

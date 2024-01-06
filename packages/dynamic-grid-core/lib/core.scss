@@ -2,11 +2,15 @@
   overflow: hidden;
 }
 
+.dg-is-shrink {
+  --dg-min-width-grid-shrink: min(100%, var(--dg-min-width, 200px));
+}
+
 .dg-grid {
   display: grid;
   grid-template-columns: repeat(
     var(--dg-repeat-count, auto-fit),
-    minmax(var(--dg-min-width, 200px), 1fr)
+    minmax(var(--dg-min-width-grid-shrink, var(--dg-min-width, 200px)), 1fr)
   );
   gap: var(--dg-gap, unset);
   overflow: hidden;
@@ -24,23 +28,23 @@
     calc(
       (
           100% - (var(--dg-repeat-count, 4) + var(--dg-scroll-hint, 0) - 1) *
-            var(--dg-gap, 0px)
+            var(--dg-gap-inline, var(--dg-gap, 0px))
         ) / (var(--dg-repeat-count, 2) + var(--dg-scroll-hint, 0))
     ),
-    var(--dg-min-width, 200px)
+    var(--dg-min-width-grid-shrink, var(--dg-min-width, 200px))
   );
 
-  & *,
+  & > *,
   ::slotted(*) {
     scroll-snap-align: var(--dg-scroll-snap-align, start);
   }
 
-  & *,
+  & > *,
   ::slotted(*):first-child {
     scroll-snap-align: start;
   }
 
-  & *,
+  & > *,
   ::slotted(*):last-child {
     scroll-snap-align: end;
   }

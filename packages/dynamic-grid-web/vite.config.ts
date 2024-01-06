@@ -3,7 +3,12 @@ import { defineConfig } from 'vite';
 import dts from 'vite-plugin-dts';
 
 export default defineConfig({
-  plugins: [litStyleLoader(), dts()],
+  plugins: [
+    litStyleLoader(),
+    dts({
+      exclude: ['**/*.test.ts'],
+    }),
+  ],
   build: {
     outDir: 'dist',
     lib: {

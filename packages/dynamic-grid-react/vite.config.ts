@@ -5,7 +5,7 @@ import dts from 'vite-plugin-dts';
 import { libInjectCss } from 'vite-plugin-lib-inject-css';
 
 export default defineConfig({
-  plugins: [dts(), react(), libInjectCss()],
+  plugins: [dts({ exclude: ['**/*.test.tsx'] }), react(), libInjectCss()],
   css: {
     modules: {
       localsConvention: 'camelCaseOnly',
