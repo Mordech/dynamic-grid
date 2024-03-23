@@ -24,6 +24,7 @@ export const ImageSpacer = styled.div`
 
 export const Description = styled.p`
   display: flex;
+  flex: 1;
   flex-direction: column;
   place-content: center;
   background-color: ${colors.background.overlay};

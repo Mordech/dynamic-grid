@@ -6,9 +6,11 @@ import {
   Button,
   FeaturedCard,
   GithubBadge,
+  Icon,
   MusicCard,
   TestimonialCard,
   ToggleThemeButton,
+  TourCard,
 } from './components';
 
 /**
@@ -36,7 +38,6 @@ function App() {
     <DeleteThisContainer>
       <GithubBadge href="#" />
       <ToggleThemeButton size="compact" />
-
       <ButtonContainer>
         <Button
           aria-label="Previous"
@@ -46,13 +47,7 @@ function App() {
           variant="tonal"
           size="compact"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path d="m7.825 13 5.6 5.6L12 20l-8-8 8-8 1.425 1.4-5.6 5.6H20v2H7.825Z" />
-          </svg>
+          <Icon icon="arrow_back" />
         </Button>
 
         <Button
@@ -62,15 +57,43 @@ function App() {
           variant="tonal"
           size="compact"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path d="M16.175 13H4v-2h12.175l-5.6-5.6L12 4l8 8-8 8-1.425-1.4 5.6-5.6Z" />
-          </svg>
+          <Icon icon="arrow_forward" />
         </Button>
       </ButtonContainer>
+
+      <DynamicGrid
+        minColumnWidth="21.5rem"
+        gap="2rem 1rem"
+        isScroll
+        scrollOptions={{ hideScrollbar: true, scrollSnapAlign: 'start' }}
+      >
+        <TourCard
+          title="Test Tour"
+          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos."
+          image="https://picsum.photos/seed/1/800/800"
+          rating={4.5}
+          discount={50}
+          duration="7 days"
+          difficulty="easy"
+        />
+        <TourCard
+          title="Very Long Tour Name That Should Wrap"
+          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos."
+          image="https://picsum.photos/seed/2/800/800"
+          rating={2.5}
+          duration="2 days"
+          difficulty="medium"
+        />
+        <TourCard
+          title="Cool Tour"
+          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos."
+          image="https://picsum.photos/seed/3/800/800"
+          rating={5}
+          discount={50}
+          duration="4 days"
+          difficulty="difficult"
+        />
+      </DynamicGrid>
 
       <DynamicGrid
         minColumnWidth="20rem"

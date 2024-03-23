@@ -1,6 +1,7 @@
 import { css, Global } from '@emotion/react';
 
 import '@mordech/tokens/css/fonts/sans.css';
+import '@mordech/tokens/css/fonts/serif.css';
 import '@mordech/tokens/css/reset.css';
 import '@mordech/tokens/css/tokens.css';
 

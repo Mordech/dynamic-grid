@@ -19,6 +19,6 @@ export const ToggleThemeButton = createComponent({
   elementClass: MrdToggleThemeElement,
   react: React,
   events: {
-    onToggleTheme: 'toggle-theme' as unknown as ToggleThemeEvent,
+    onToggleTheme: 'toggle-theme' as ToggleThemeEvent,
   },
 });
