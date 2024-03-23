@@ -52,6 +52,7 @@ The `DynamicGrid` component accepts the following props:
 - `gap` (optional): The gap between each grid item. This can be any valid CSS length value, such as `20px` or `2rem`. Defaults to `0`.
 - `maxColumns` (optional): The maximum number of columns to display. If there is not enough space for this many columns, the grid will shrink to fit.
 - `dividedBy` (optional): The number to divide the available space by to calculate the number of columns. Defaults to `1`.
+- `shrink` (optional): Makes the grid shrink to fit below the minimum width. Defaults to `true`.
 - `isScroll` (optional): Whether to enable scrolling. Defaults to `false`.
 - `scrollOptions` (optional): An object containing options for scrolling. This object can have the following properties:
   - `hint`: The number of pixels to show before and after the visible area. Defaults to `0`.
