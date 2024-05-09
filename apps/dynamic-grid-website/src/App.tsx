@@ -2,6 +2,7 @@ import { useState } from 'react';
 import styled from '@emotion/styled';
 import { DynamicGrid } from '@mordech/dynamic-grid-react';
 
+import { Carousel } from './components/carousel/carousel';
 import {
   Button,
   FeaturedCard,
@@ -36,6 +37,21 @@ function App() {
 
   return (
     <DeleteThisContainer>
+      <Carousel minColumnWidth="24rem" gap="1rem">
+        {Array(10)
+          .fill('')
+          .map(() => (
+            <TourCard
+              title="Test Tour"
+              description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos."
+              image="https://picsum.photos/seed/1/800/800"
+              rating={4.5}
+              discount={50}
+              duration="7 days"
+              difficulty="easy"
+            />
+          ))}
+      </Carousel>
       <GithubBadge href="#" />
       <ToggleThemeButton size="compact" />
       <ButtonContainer>
@@ -60,8 +76,7 @@ function App() {
           <Icon icon="arrow_forward" />
         </Button>
       </ButtonContainer>
-
-      <DynamicGrid
+      <Carousel
         minColumnWidth="21.5rem"
         gap="2rem 1rem"
         isScroll
@@ -93,9 +108,8 @@ function App() {
           duration="4 days"
           difficulty="difficult"
         />
-      </DynamicGrid>
-
-      <DynamicGrid
+      </Carousel>
+      <Carousel
         minColumnWidth="20rem"
         gap="2rem 1rem"
         isScroll
@@ -156,9 +170,8 @@ function App() {
           location="Dallas, TX"
           testimonial="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, libero et aliquam ultrices, nunc elit tincidunt urna, ac lacinia justo nisl sed nunc."
         />
-      </DynamicGrid>
-
-      <DynamicGrid minColumnWidth="15rem" gap="1rem">
+      </Carousel>
+      <Carousel minColumnWidth="15rem" gap="1rem">
         <FeaturedCard
           backgroundImage="url(https://loremflickr.com/600/600/flower?lock=1)"
           description="Enigmatic Oasis Discovered in the Heart of the Sahara Desert!"
@@ -168,9 +181,8 @@ function App() {
           backgroundImage="url(https://loremflickr.com/600/600/flower?lock=3)"
           description="Mystical Underwater City Unearthed in the Pacific Depths!"
         />
-      </DynamicGrid>
-
-      <DynamicGrid minColumnWidth="10rem" gap="1rem">
+      </Carousel>
+      <Carousel minColumnWidth="10rem" gap="1rem">
         <MusicCard
           variant="album"
           src="https://loremflickr.com/320/320/abstract?lock=1"
@@ -181,7 +193,7 @@ function App() {
           src="https://loremflickr.com/320/320/abstract?lock=4"
           cardInfo={{ artist: 'Jane Smith', albumName: 'Lonesome' }}
         />
-      </DynamicGrid>
+      </Carousel>
       <DynamicGrid minColumnWidth="7rem" gap="1rem">
         <MusicCard
           variant="artist"
