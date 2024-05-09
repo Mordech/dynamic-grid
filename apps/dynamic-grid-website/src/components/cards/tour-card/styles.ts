@@ -35,7 +35,7 @@ export const Content = styled.div`
 
 export const Title = styled.h3`
   font-size: ${fontSizes[2]};
-  font-family: ${fontFamilies.serif};
+  font-family: ${fontFamilies.ui};
   font-weight: ${fontWeights.medium};
   color: ${colors.background.onBase};
   line-height: 1.25;
@@ -59,8 +59,8 @@ export const DiscountContainer = styled.div`
 
 export const DiscountPercentage = styled.span`
   font-size: ${fontSizes[3]};
-  font-family: ${fontFamilies.serif};
-  font-weight: ${fontWeights.medium};
+  font-family: ${fontFamilies.ui};
+  font-weight: ${fontWeights.regular};
   line-height: 1;
 `;
 
