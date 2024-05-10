@@ -63,11 +63,15 @@ export const Carousel: FC<CarouselProps> = ({ children, ...rest }) => {
   }, []);
 
   useLayoutEffect(() => {
-    const resizeObserver = new ResizeObserver(handleArrowsState);
+    handleArrowsState();
+
+    const resizeObserver = new ResizeObserver(() =>
+      requestAnimationFrame(handleArrowsState),
+    );
     resizeObserver.observe(gridRef.current!);
 
-    return resizeObserver.disconnect;
-  }, [handleArrowsState]);
+    return () => resizeObserver.disconnect();
+  }, [handleArrowsState, gridRef.current?.scrollWidth]);
 
   return (
     <CarouselWrapper>
@@ -97,7 +101,7 @@ export const Carousel: FC<CarouselProps> = ({ children, ...rest }) => {
 
       <DynamicGrid
         ref={gridRef}
-        onScroll={handleArrowsState}
+        onScroll={() => requestAnimationFrame(handleArrowsState)}
         scrollOptions={{ hideScrollbar: true }}
         {...rest}
         isScroll
