@@ -7,7 +7,8 @@
     "apps/*"
   ],
   "scripts": {
-    "start": "npx -c 'lerna watch -- lerna run build --scope=$LERNA_PACKAGE_NAME'"
+    "start": "npx -c 'lerna watch -- lerna run build --scope=$LERNA_PACKAGE_NAME'",
+    "postinstall": "lerna run build"
   },
   "dependencies": {
     "@emotion/styled": "^11.11.0",
