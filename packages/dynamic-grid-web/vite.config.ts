@@ -1,9 +1,14 @@
-import { viteLitLoader } from '@mordech/vite-lit-loader';
+import { litStyleLoader } from '@mordech/vite-lit-loader';
 import { defineConfig } from 'vite';
 import dts from 'vite-plugin-dts';
 
 export default defineConfig({
-  plugins: [viteLitLoader(), dts()],
+  plugins: [
+    litStyleLoader(),
+    dts({
+      exclude: ['**/*.test.ts'],
+    }),
+  ],
   build: {
     outDir: 'dist',
     lib: {
@@ -13,6 +18,15 @@ export default defineConfig({
       },
     },
     rollupOptions: {
+      output: {
+        globals: {
+          lit: 'lit',
+          'lit/decorators.js': 'lit',
+          'lit/directives/class-map.js': 'lit',
+          'lit/directives/ref.js': 'lit',
+          'lit/directives/style-map.js': 'lit',
+        },
+      },
       external: /^lit/,
     },
   },

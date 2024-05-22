@@ -1,8 +1,16 @@
+:host {
+  overflow: hidden;
+}
+
+.dg-is-shrink {
+  --dg-min-width-grid-shrink: min(100%, var(--dg-min-width, 200px));
+}
+
 .dg-grid {
   display: grid;
   grid-template-columns: repeat(
     var(--dg-repeat-count, auto-fit),
-    minmax(var(--dg-min-width, 200px), 1fr)
+    minmax(var(--dg-min-width-grid-shrink, var(--dg-min-width, 200px)), 1fr)
   );
   gap: var(--dg-gap, unset);
   overflow: hidden;
@@ -11,21 +19,19 @@
 /* dose'nt work with --dg-repeat-count: auto-fit/fill */
 .dg-is-scroll {
   scroll-behavior: smooth;
-  overflow-x: scroll;
-  overflow-y: visible;
+  overflow: auto hidden;
   scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
   grid-auto-flow: column;
-  grid-template-rows: repeat(var(--dg-scroll-rows, 1), auto);
+  grid-template-rows: repeat(var(--dg-scroll-rows, 1), 1fr);
   grid-template-columns: unset;
   grid-auto-columns: max(
     calc(
       (
           100% - (var(--dg-repeat-count, 4) + var(--dg-scroll-hint, 0) - 1) *
-            var(--dg-gap, 0px)
+            var(--dg-gap-inline, var(--dg-gap, 0px))
         ) / (var(--dg-repeat-count, 2) + var(--dg-scroll-hint, 0))
     ),
-    var(--dg-min-width, 200px)
+    var(--dg-min-width-grid-shrink, var(--dg-min-width, 200px))
   );
 
   & > *,

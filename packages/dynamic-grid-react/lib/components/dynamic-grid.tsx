@@ -7,7 +7,11 @@ import React, {
   useState,
 } from 'react';
 import { mergeRefs } from 'react-merge-refs';
-import { calcColumns, convertUnit } from '@mordech/dynamic-grid-core/lib';
+import {
+  calcColumns,
+  convertUnit,
+  getHorizontalGap,
+} from '@mordech/dynamic-grid-core/lib';
 import classnames from 'classnames';
 
 import styles from '@mordech/dynamic-grid-core/lib/core.module.scss';
@@ -27,6 +31,7 @@ export type DynamicGridProps = {
   dividedBy?: number;
   scrollOptions?: ScrollProps;
   isScroll?: boolean;
+  shrink?: boolean;
 } & React.HTMLAttributes<HTMLDivElement>;
 
 export const DynamicGrid = forwardRef(
@@ -40,6 +45,8 @@ export const DynamicGrid = forwardRef(
       isScroll,
       scrollOptions,
       dividedBy,
+      shrink = true,
+      className,
       ...rest
     }: DynamicGridProps,
     ref,
@@ -55,7 +62,7 @@ export const DynamicGrid = forwardRef(
         calcColumns({
           minWidth: convertUnit(minColumnWidth, 'px'),
           elementWidth: gridRef.current?.clientWidth || 0,
-          gap: gap ? convertUnit(gap, 'px') : undefined,
+          gap: gap ? convertUnit(getHorizontalGap(gap), 'px') : undefined,
           dividedBy,
           maxColumns,
           scrollHint: scrollOptions?.hint,
@@ -85,6 +92,7 @@ export const DynamicGrid = forwardRef(
       '--dg-repeat-count': columns || gridType,
       '--dg-min-width': minColumnWidth,
       '--dg-gap': gap,
+      '--dg-gap-inline': gap ? getHorizontalGap(gap) : undefined,
       '--dg-scroll-hint': scrollOptions?.hint,
       '--dg-scroll-snap-align': scrollOptions?.scrollSnapAlign,
       '--dg-scroll-rows': scrollOptions?.rows,
@@ -93,9 +101,10 @@ export const DynamicGrid = forwardRef(
     return (
       <div
         ref={mergedRef}
-        className={classnames(styles.dgGrid, {
+        className={classnames(className, styles.dgGrid, {
           [styles.dgIsScroll]: isScroll || scrollOptions,
           [styles.dgIsScrollbarHidden]: scrollOptions?.hideScrollbar,
+          [styles.dgIsShrink]: shrink,
         })}
         style={styleMap}
         {...rest}

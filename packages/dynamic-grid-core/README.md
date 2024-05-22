@@ -30,7 +30,7 @@ To use this function, import it into your project and call it with an object tha
 
 - `gap`: The gap between each column in px (optional, defaults to 0).
 
-- `dividedBy`: The number to divide the number of columns by (optional, defaults to 1). For example if you want the number of columns to be even, you can set this to 2.
+- `dividedBy`: The number to divide the number of columns by (optional, defaults to 1). For example, if you want the number of columns to be even, you can set this to 2.
 
 - `maxColumns`: The maximum number of columns that can be displayed (optional, defaults to Infinity).
 
@@ -87,10 +87,20 @@ To use the `.dg-grid` class, add it to the container element of the grid:
 </div>
 ```
 
-To use the `.dg-is-scroll` class, add it to the container element of the grid when the grid is scrollable:
+To make the grid scrollable, use the `.dg-is-scroll` class, and add it to the container element of the grid:
 
 ```html
 <div class="dg-grid dg-is-scroll">
+  <!-- Grid elements -->
+</div>
+```
+
+> `.dg-is-scroll` cannot work with `--dg-repeat-count` set to `auto-fit` or `auto-fill`.
+
+To make the grid shrink to fit below the minimum width, add the `.dg-is-shrink` class to the container element of the grid:
+
+```html
+<div class="dg-grid dg-is-shrink">
   <!-- Grid elements -->
 </div>
 ```
@@ -100,9 +110,15 @@ To use the `.dg-is-scroll` class, add it to the container element of the grid wh
 The `core.css` file uses the following CSS custom properties (also known as CSS variables):
 
 - `--dg-repeat-count`: Specifies the number of columns in the grid. Defaults to `auto-fit`.
+
 - `--dg-min-width`: Specifies the minimum width of each grid element. Defaults to `200px`.
+
 - `--dg-gap`: Specifies the gap between grid elements. Defaults to `unset`.
+
+- `--dg-gap-inline`: Used to calculate the gap between grid elements. Defaults to `var(--dg-gap)`. This property is used when `--dg-gap` has two values, one for the horizontal gap and one for the vertical gap. This value is needed only in `.dg-is-scroll` mode. For example, if `--dg-gap` is set to `10px 20px`, then `--dg-gap-inline` should be set to `20px`.
+
 - `--dg-scroll-rows`: Specifies the number of rows in the scrollable grid. Defaults to `1`.
+
 - `--dg-scroll-hint`: Specifies the number of columns to show as a hint when scrolling. Defaults to `0`.
 
 These custom properties are used to define the grid layout and scroll behavior of the dynamic grid. They can be customized by setting their values in the CSS for the `.grid` and `.is-scroll` classes.

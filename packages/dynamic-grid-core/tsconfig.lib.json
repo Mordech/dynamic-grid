@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "rootDir": "./lib",
+    "tsBuildInfoFile": null,
+    "declaration": true,
+    "composite": true
+  },
+  "include": ["lib/**/*.ts"],
+  "exclude": ["lib/**/*.test.ts", "lib/**/*.spec.ts"]
+}

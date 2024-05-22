@@ -4,7 +4,7 @@
   "ignoreFiles": "**/*.{js,jsx,ts,tsx}",
   "rules": {
     "scss/operator-no-newline-after": null,
-    "selector-class-pattern": "dg.+",
-    "custom-property-pattern": "dg.+"
+    "selector-class-pattern": "(dg|mrd).+",
+    "custom-property-pattern": "(dg|mrd).+"
   }
 }
