@@ -1,6 +1,6 @@
 {
   "name": "@mordech/dynamic-grid-core",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "license": "MIT",
   "author": "Elad Mordechai Mizrahi",
   "description": "A dynamic grid component",
