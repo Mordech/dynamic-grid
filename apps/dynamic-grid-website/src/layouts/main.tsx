@@ -12,7 +12,8 @@ export const Main = styled.div`
   width: 100%;
   border-radius: 1rem;
   padding: 1rem;
-
+  resize: horizontal;
+  overflow: hidden;
   ${breakpoints.sm} {
     padding: 2rem;
   }
