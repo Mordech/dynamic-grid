@@ -4,15 +4,15 @@ The `mrd-dynamic-grid` component is a web component built with LitElement that a
 
 ## Installation
 
-To use the `MrdDynamicGridElement` component, you can install it via npm:
+To use the `mrd-dynamic-grid` component, you can install it via npm:
 
 ```bash
-npm install @mordech/dynamic-grid-core @mordech/dynamic-grid-element
+npm install @mordech/dynamic-grid-web
 ```
 
 ## Usage
 
-To use the `MrdDynamicGridElement` component, you can import it and use it like any other web component:
+To use the `mrd-dynamic-grid` component, you can import it and use it like any other web component:
 
 ```html
 <!doctype html>
@@ -40,7 +40,7 @@ To use the `MrdDynamicGridElement` component, you can import it and use it like 
 
 ## Attributes
 
-The `MrdDynamicGridElement` component accepts the following attributes:
+The `mrd-dynamic-grid` component accepts the following attributes:
 
 - `minColumnWidth` (required): The minimum width of each column. This can be any valid CSS length value in `rem` or `px`, such as `200px` or `10rem`.
 - `gridType` (optional): The type of grid to use. This can be either `auto-fill` or `auto-fit`. Defaults to `auto-fill`.
