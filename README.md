@@ -20,7 +20,7 @@ For more details, refer to the [`dynamic-grid-core` README](./packages/dynamic-g
 
 #### `dynamic-grid-web`
 
-A web component built with LitElement, allowing for dynamic grid layouts in any web application. This component utilizes the core library to handle the layout calculations.
+A web component built with [Lit](https://lit.dev/), allowing for dynamic grid layouts in any web application. This component utilizes the core library to handle the layout calculations.
 
 For more details, refer to the [`dynamic-grid-web` README](./packages/dynamic-grid-web/README.md).
 
