@@ -14,7 +14,7 @@
     "@mordech/dynamic-grid-react": "*",
     "@mordech/dynamic-grid-web": "*",
     "ts-node": "^10.9.2",
-    "typescript": "5.3.3",
-    "vite": "^5.0.11"
+    "typescript": "5.8.2",
+    "vite": "^6.2.1"
   }
 }
