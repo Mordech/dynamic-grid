@@ -1,6 +1,6 @@
 import { html, render } from 'lit';
 
-import { MrdDynamicGridElement } from './dynamic-grid';
+import { MrdDynamicGridElement } from '.';
 
 async function getGridRef() {
   const grid = document.body.querySelector('mrd-dynamic-grid');

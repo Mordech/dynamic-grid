@@ -1,8 +1,13 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    /* Bundler mode */
-    "moduleResolution": "bundler",
+    "target": "ES2022",
+    "module": "ES2022",
+    "outDir": "./dist",
+    "declaration": true,
+    "experimentalDecorators": true,
+    "useDefineForClassFields": true,
+    "skipLibCheck": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "plugins": [
@@ -12,6 +17,8 @@
       }
     ]
   },
+
   "include": ["lib"],
+  "exclude": ["node_modules", "dist"],
   "references": [{ "path": "./tsconfig.test.json" }]
 }
