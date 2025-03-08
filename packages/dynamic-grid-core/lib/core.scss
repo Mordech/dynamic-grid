@@ -20,6 +20,7 @@
 .dg-is-scroll {
   scroll-behavior: smooth;
   overflow: auto hidden;
+  scrollbar-width: thin;
   scroll-snap-type: x mandatory;
   grid-auto-flow: column;
   grid-template-rows: repeat(var(--dg-scroll-rows, 1), 1fr);
@@ -29,7 +30,8 @@
       (
           100% - (var(--dg-repeat-count, 4) + var(--dg-scroll-hint, 0) - 1) *
             var(--dg-gap-inline, var(--dg-gap, 0px))
-        ) / (var(--dg-repeat-count, 2) + var(--dg-scroll-hint, 0))
+        ) /
+        (var(--dg-repeat-count, 2) + var(--dg-scroll-hint, 0))
     ),
     var(--dg-min-width-grid-shrink, var(--dg-min-width, 200px))
   );
@@ -48,8 +50,6 @@
   ::slotted(*):last-child {
     scroll-snap-align: end;
   }
-
-  scrollbar-width: thin;
 }
 
 .dg-is-scrollbar-hidden {

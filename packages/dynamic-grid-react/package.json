@@ -5,6 +5,7 @@
   "author": "Elad Mordechai Mizrahi",
   "type": "module",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Mordech/dynamic-grid.git",
@@ -23,13 +24,13 @@
     "prepare": "yarn build"
   },
   "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
-    "typescript": "^5.3.3",
-    "vite": "^5.0.11",
-    "vitest": "^1.1.3"
+    "typescript": "^5.8.2",
+    "vite": "^6.2.1",
+    "vitest": "^3.0.8"
   },
   "publishConfig": {
     "access": "public"

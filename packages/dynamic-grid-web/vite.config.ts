@@ -6,7 +6,10 @@ export default defineConfig({
   plugins: [
     litStyleLoader(),
     dts({
-      exclude: ['**/*.test.ts'],
+      include: 'lib/**/*.ts',
+      exclude: ['**/*.test.ts', '**/*.spec.ts'],
+      insertTypesEntry: true,
+      tsconfigPath: 'tsconfig.build.json',
     }),
   ],
   build: {
@@ -25,6 +28,7 @@ export default defineConfig({
           'lit/directives/class-map.js': 'lit',
           'lit/directives/ref.js': 'lit',
           'lit/directives/style-map.js': 'lit',
+          'lit-html/is-server.js': 'lit-html',
         },
       },
       external: /^lit/,

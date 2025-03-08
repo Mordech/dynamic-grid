@@ -7,6 +7,7 @@
   "include": [
     "vite.config.ts",
     "lib/**/*.ts",
+    "lib/**/*.tsx",
     "lib/**/*.test.ts",
     "lib/**/*.spec.ts",
     "lib/**/*.test.tsx",

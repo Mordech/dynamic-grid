@@ -19,7 +19,7 @@ yarn add @mordech/dynamic-grid-react
 To use the `DynamicGrid` component, you can import it and use it like any other React component:
 
 ```jsx
-import DynamicGrid from '@mordech/dynamic-grid-react';
+import { DynamicGrid } from '@mordech/dynamic-grid-react';
 
 function MyComponent() {
   return (
