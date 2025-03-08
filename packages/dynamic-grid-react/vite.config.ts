@@ -7,7 +7,7 @@ import { libInjectCss } from 'vite-plugin-lib-inject-css';
 export default defineConfig({
   plugins: [
     dts({
-      exclude: ['**/*.test.tsx', './lib/App.tsx', './lib/main.tsx'],
+      tsconfigPath: './tsconfig.build.json',
       insertTypesEntry: true,
     }),
     react(),

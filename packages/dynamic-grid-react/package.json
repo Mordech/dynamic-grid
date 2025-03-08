@@ -5,7 +5,7 @@
   "author": "Elad Mordechai Mizrahi",
   "type": "module",
   "main": "dist/index.js",
-  "types": "dist/dynamic-grid.d.ts",
+  "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Mordech/dynamic-grid.git",
