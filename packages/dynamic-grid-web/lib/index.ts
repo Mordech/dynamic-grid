@@ -6,8 +6,8 @@ import {
 } from '@mordech/dynamic-grid-core/lib';
 import styles from '@mordech/dynamic-grid-core/lib/core.scss?lit';
 import { html, LitElement } from 'lit';
-import { classMap } from 'lit/directives/class-map.js';
 import { customElement, property } from 'lit/decorators.js';
+import { classMap } from 'lit/directives/class-map.js';
 import { createRef, Ref, ref } from 'lit/directives/ref.js';
 import { styleMap } from 'lit/directives/style-map.js';
 
@@ -45,8 +45,13 @@ class MrdDynamicGridElement extends LitElement {
       : this.gridType;
   }
 
-  private resizeController = new ResizeController(this, {});
   public gridRef: Ref<HTMLDivElement> = createRef();
+
+  private _resizeController = new ResizeController(this, {
+    callback: (e) =>
+      console.log(e[0]?.borderBoxSize[0].inlineSize, e[0]?.target),
+    config: { box: 'border-box' },
+  });
 
   render() {
     const styles = {
@@ -79,7 +84,7 @@ class MrdDynamicGridElement extends LitElement {
 
   firstUpdated() {
     this.updateComplete.then(() => {
-      this.resizeController.observe(this.gridRef.value!);
+      this._resizeController.observe(this.gridRef.value!);
     });
     this.classList.remove('dg-is-loading');
   }

@@ -6,7 +6,7 @@
     "outDir": "./dist",
     "declaration": true,
     "experimentalDecorators": true,
-    "useDefineForClassFields": true,
+    "useDefineForClassFields": false,
     "skipLibCheck": true,
     "resolveJsonModule": true,
     "isolatedModules": true,

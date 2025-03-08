@@ -10,10 +10,12 @@ async function getGridRef() {
 }
 
 beforeAll(() => {
-  global.ResizeObserver = vitest.fn().mockImplementation(() => ({
-    observe: vitest.fn(),
-    unobserve: vitest.fn(),
-    disconnect: vitest.fn(),
+  vitest.mock('@lit-labs/observers/resize-controller.js', () => ({
+    ResizeController: vitest.fn().mockImplementation(() => ({
+      observe: vitest.fn(),
+      unobserve: vitest.fn(),
+      disconnect: vitest.fn(),
+    })),
   }));
 
   Object.defineProperty(HTMLElement.prototype, 'clientWidth', {
