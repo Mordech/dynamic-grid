@@ -5,9 +5,11 @@
   "parser": "@typescript-eslint/parser",
   "plugins": ["react-refresh"],
   "rules": {
+    "no-unused-expressions": "off",
+    "@typescript-eslint/no-unused-expressions": "off",
     "react-refresh/only-export-components": [
       "warn",
-      { "allowConstantExport": true }
-    ]
-  }
+      { "allowConstantExport": true },
+    ],
+  },
 }
