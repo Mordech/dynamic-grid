@@ -47,11 +47,7 @@ class MrdDynamicGridElement extends LitElement {
 
   public gridRef: Ref<HTMLDivElement> = createRef();
 
-  private _resizeController = new ResizeController(this, {
-    callback: (e) =>
-      console.log(e[0]?.borderBoxSize[0].inlineSize, e[0]?.target),
-    config: { box: 'border-box' },
-  });
+  private _resizeController = new ResizeController(this, {});
 
   render() {
     const styles = {
